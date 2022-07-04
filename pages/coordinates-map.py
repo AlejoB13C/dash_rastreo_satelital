@@ -17,7 +17,7 @@ map_layout = map_coords.map_layout
 filter = Filter("date_range", "button_estimate")
 filter_layout = filter.layout
 
-route_maker =  Route()
+route_maker = Route()
 
 
 layout = dmc.Paper(
@@ -82,10 +82,10 @@ def map_dblclick(click_lat_lng):
 
 
 @callback(
-    Output('route', 'positions'),
+    Output('route_line', 'positions'),
     Output(filter.button_id, "children"),
     Input(filter.button_id, "n_clicks"),
-    State(map_coords.id, "click_lat_lng"),
+    State(map_coords.id, "dbl_click_lat_lng"),
     State('destination', 'position'),
     State(filter.date_id, "value"),
     prevent_initial_call=True,
