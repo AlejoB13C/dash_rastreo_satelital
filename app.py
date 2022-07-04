@@ -53,4 +53,4 @@ server = app.server
 
 # Testing server, don't use in production, host
 if __name__ == "__main__":
-    app.run_server(host='localhost', port=8080, debug=False)
+    app.run_server(host='0.0.0.0', port=8080, debug=False)
